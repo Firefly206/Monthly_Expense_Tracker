@@ -1,4 +1,4 @@
-import "..styles.css";
+import "../../styles.css";
 import { Navigation } from "../Navigation";
 import {Outlet} from "react-router-dom";
 import { loadSettings } from "../settings";

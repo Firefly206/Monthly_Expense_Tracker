@@ -1,4 +1,4 @@
-import "/src/styles.css"; 
+import "../../styles.css";
 import { Link } from "react-router-dom";
 import {useSearchParams} from "react-router-dom";
 

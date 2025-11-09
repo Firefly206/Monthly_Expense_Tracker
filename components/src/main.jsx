@@ -13,7 +13,7 @@ import { BudgetPage } from "./pages/BudgetPage";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomeLayoutPage />, //Could change to login/signup page or get started page
+        element: <HomePage />, //Could change to login/signup page or get started page
         children: [
             {path: "/", element: <HomePage/>},
             {   path: "/plans", 
