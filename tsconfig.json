@@ -8,6 +8,6 @@
     "types": ["vite/client", "node"],
     "baseUrl": "."
   },
-  "include": ["components/src", "vite.config.ts"],
+  "include": ["components/src", "types", "vite.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
