@@ -1,7 +1,7 @@
 import DatabaseProvider from "./providers/DatabaseProvider";
 import { useDatabase } from "./hooks/useDatabase";
 
-function TransactionsPage() {
+export function TransactionsPage() {
   const { ready, api } = useDatabase();
   if (!ready) return <div>Loading database…</div>;
 
