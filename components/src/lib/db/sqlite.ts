@@ -13,7 +13,9 @@ function scheduleSave() {
     clearTimeout(saveTimer);
   }
   saveTimer = window.setTimeout(async () => {
-    if (!db) return;
+    if (!db) {
+      return;
+    }
     const bytes = db.export();
     await saveBytes(bytes);
   }, 400);
@@ -25,8 +27,12 @@ async function readSchemaText(): Promise<string> {
 }
 
 export async function initDatabase(): Promise<void> {
-  if (db) return;
-  if (!SQL) SQL = await initSqlJs({ locateFile: (f) => `/${f}` });
+  if (db) {
+    return;
+  }
+  if (!SQL) {
+    SQL = await initSqlJs({ locateFile: (f) => `/${f}` });
+  }
 
   const existing = await loadBytes();
   if (existing) {
@@ -44,7 +50,9 @@ export async function initDatabase(): Promise<void> {
 }
 
 export function getDB(): Database {
-  if (!db) throw new Error("DB not initialized. Call initDatabase() first.");
+  if (!db) {
+    throw new Error("DB not initialized. Call initDatabase() first.");
+  }
   return db;
 }
 
