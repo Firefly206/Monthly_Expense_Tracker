@@ -22,7 +22,7 @@ function scheduleSave() {
 }
 
 async function readSchemaText(): Promise<string> {
-  const res = await fetch("/databases/schema.sqlite.sql"); // served statically
+  const res = await fetch("/schema.sqlite.sql"); // served statically
   return await res.text();
 }
 

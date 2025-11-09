@@ -38,9 +38,9 @@ const filterPlans = plans.filter((plan) => (!search) || plan.name.toLowerCase().
                     onChange={(event) => {
                         const value = event.target.value;
                         if (value.trim() === "") {
-                            setParms({});
+                            setParams({});
                         } else {
-                            setParms({search: value});
+                            setParams({search: value});
                         }
                     }} />
                 <ul style={{textAlign: "left"}}>

@@ -1,6 +1,8 @@
-
+import SummaryPanel from "../panels/SummaryPanel";
 export function BudgetPage() {
     return(
+        <div style={{ display: "grid", gap: "1rem" }}>
+      <SummaryPanel />
         <div class="content">
             <div class="heading">
                 <h2>Budget</h2>
@@ -18,6 +20,6 @@ export function BudgetPage() {
             </div>
             
         </div>
-        
+        </div>
     )
 }

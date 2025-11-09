@@ -2,20 +2,19 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { StrictMode } from "react";
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage } from "./pages/HomePageLayout";
-import { PlanPage } from "./pages/PlansPage";
+import { HomePage } from "./pages/HomePageLayout.jsx";
+import { PlanPage } from "./pages/PlansPage.jsx";
 import { TransactionsPage } from "./App";
-import { ProtectedRoute } from "./ProtectedRoute";
-import { MonthlyPlans } from "./pages/MonthlyPlans";
-import { DailyPlans } from "./pages/DailyPlans";
-import { BudgetPage } from "./pages/BudgetPage";
+import { ProtectedRoute } from "./ProtectedRoute.jsx";
+import { MonthlyPlans } from "./pages/MonthlyPlans.jsx";
+import { DailyPlans } from "./pages/DailyPlans.jsx";
+import { BudgetPage } from "./pages/BudgetPage.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <HomePage />, //Could change to login/signup page or get started page
         children: [
-            {path: "/", element: <HomePage/>},
             {   path: "/plans", 
                 element: <PlanPage/>,
                 children: [

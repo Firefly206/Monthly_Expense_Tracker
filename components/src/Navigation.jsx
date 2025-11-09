@@ -12,7 +12,7 @@ export function Navigation () {
     };
 
     return (
-        <div class="main-nav">
+        <div classname="main-nav">
             <nav>
                 <NavLink to="/">Home</NavLink>
                 {' | '}
